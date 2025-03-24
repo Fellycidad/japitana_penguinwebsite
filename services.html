@@ -99,17 +99,24 @@
             position: relative;
         }
 
-        .carousel-images {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
+        img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.carousel-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.carousel-images img {
+    width: 100%;
+    max-width: 800px; 
+    height: auto;
+    object-fit: cover;
+}
 
-        .carousel-images img {
-            width: 100%;
-            max-width: 800px; /* Ensure the image doesn't exceed a maximum width */
-            height: auto;
-            border-radius: 8px;
-        }
 
         .carousel-slide {
             min-width: 100%;
@@ -220,6 +227,11 @@
     font-weight: bold;
     color: #333;
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 
         /* Mobile Responsive Design */
         @media screen and (max-width: 768px) {
@@ -298,11 +310,6 @@
                 padding: 10px;
                 font-size: 18px;
             }
-            img {
-  max-width: 100%;
-  height: auto;
-}
-
         }
     </style>
 </head>
