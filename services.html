@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bridal Car Services</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="logo.webp" alt="Company Logo">
+            <span class="company-name">Penguin Sales & Services</span>
+        </div>
+        <nav>
+            <ul class="navbar">
+                <li><a href="penguin.html" id="homeNav">Home</a></li>
+            </ul>
+        </nav>
+    </header>
     <style>
         /* Global styles */
         * {
@@ -151,7 +164,7 @@
         }
 
         .book-now-btn:hover {
-            background-color: #dda044;
+            background-color: #c78c3a;
         }
 
         /* Elegant text adjustments */
@@ -179,7 +192,113 @@
             line-height: 1.6;
             color: #555;
         }
+        .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #FFD778;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+    z-index: 100;
+}
 
+/* Logo and Company Name */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    width: 60px;
+    height: auto;
+}
+
+.company-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+        /* Mobile Responsive Design */
+        @media screen and (max-width: 768px) {
+            .service-section {
+                padding: 20px;
+            }
+
+            .service-section h2 {
+                font-size: 28px;
+                margin-bottom: 15px;
+            }
+
+            .service-section p {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+
+            .carousel {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .description {
+                flex: 1 1 100%;
+                padding-left: 0;
+                padding-top: 20px;
+            }
+
+            .description h3 {
+                font-size: 20px;
+            }
+
+            .description ul li {
+                font-size: 16px;
+            }
+
+            .description p {
+                font-size: 16px;
+            }
+
+            .book-now-btn {
+                font-size: 18px;
+                padding: 12px 24px;
+            }
+
+            .prev, .next {
+                padding: 12px;
+                font-size: 20px;
+            }
+        }
+
+        /* Small Mobile Devices */
+        @media screen and (max-width: 480px) {
+            .content {
+                padding: 10px;
+            }
+
+            .service-section {
+                padding: 15px;
+            }
+
+            .service-section h2 {
+                font-size: 24px;
+            }
+
+            .carousel-images img {
+                border-radius: 6px;
+            }
+
+            .book-now-btn {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+
+            .prev, .next {
+                padding: 10px;
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -220,8 +339,8 @@
                 </div>
 
                 <!-- Left and Right Navigation Arrows -->
-                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                <button class="prev" onclick="moveSlide(-1, this)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1, this)">&#10095;</button>
             </div>
 
             <!-- Description on the right -->
@@ -240,12 +359,10 @@
 
                 <p><strong>Price is subject to change without prior notice.</strong></p>
                 <!-- Book Now Button -->
-                <a href="penguin.html" class="book-now-btn">Book Now</a>
+                <a href="penguin.html#contact" class="book-now-btn">Book Now</a>
             </div>
         </div>
     </div>
-
-    
 
     <!-- Towing Services 24/7 Section -->
     <div class="content">
@@ -271,8 +388,8 @@
                 </div>
 
                 <!-- Left and Right Navigation Arrows -->
-                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                <button class="prev" onclick="moveSlide(-1, this)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1, this)">&#10095;</button>
             </div>
 
             <!-- Description on the right -->
@@ -284,50 +401,47 @@
                     <li>All types of vehicles</li>
                     <li>Fast response times</li>
                 </ul>
-                <a href="penguin.html" class="book-now-btn">Book Now</a>
+                <a href="penguin.html#contact" class="book-now-btn">Book Now</a>
             </div>
         </div>
     </div>
+
     <div class="content">
         <div class="service-section">
             <h2>Trucking Services</h2>
-            <p>We offer different trucking services.</p>
+            <p>We provide reliable and efficient trucking services for all your transportation needs. Our fleet of well-maintained trucks ensures safe and timely delivery of your goods.</p>
 
-            <!-- Carousel Section for Bridal Car -->
+            <!-- Carousel Section for Trucking -->
             <div class="carousel">
                 <div class="carousel-images">
                     <!-- Slide 1 -->
                     <div class="carousel-slide">
-                        <img src="bride car 1.webp" alt="Bridal Car 1">
+                        <img src="tr 1.png" alt="Trucking Service 1">
                     </div>
                     <!-- Slide 2 -->
                     <div class="carousel-slide">
-                        <img src="bride car 2.webp" alt="Bridal Car 2">
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="carousel-slide">
-                        <img src="bride car 3.webp" alt="Bridal Car 3">
-                    </div>
-                    <!-- Slide 4 -->
-                    <div class="carousel-slide">
-                        <img src="bride car 4.webp" alt="Bridal Car 4">
-                    </div>
-                    <!-- Slide 5 -->
-                    <div class="carousel-slide">
-                        <img src="bride car 5.webp" alt="Bridal Car 5">
-                    </div>
-                    <!-- Slide 6 -->
-                    <div class="carousel-slide">
-                        <img src="bride car 6.webp" alt="Bridal Car 6">
+                        <img src="tr2.png" alt="Trucking Service 2">
                     </div>
                 </div>
 
                 <!-- Left and Right Navigation Arrows -->
-                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                <button class="prev" onclick="moveSlide(-1, this)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1, this)">&#10095;</button>
             </div>
-                <!-- Book Now Button -->
-                <a href="penguin.html" class="book-now-btn">Book Now</a>
+
+            <!-- Description on the right -->
+            <div class="description">
+                <h3>Service Details:</h3>
+                <ul>
+                    <li>Local and long-distance hauling</li>
+                    <li>Cargo transportation</li>
+                    <li>Container trucking</li>
+                    <li>Reliable delivery schedules</li>
+                    <li>Professional drivers</li>
+                    <li>Competitive rates</li>
+                </ul>
+                <p><strong>Contact us for a custom quote based on your requirements.</strong></p>
+                <a href="penguin.html#contact" class="book-now-btn">Book Now</a>
             </div>
         </div>
     </div>
@@ -335,54 +449,45 @@
     <div class="content">
         <div class="service-section">
             <h2>Heavy Equipment Rental</h2>
-            <p>We offer heavy equipment rental.</p>
+            <p>Access our wide range of heavy equipment for your construction and development projects. We provide well-maintained machinery operated by skilled professionals.</p>
 
-            <!-- Carousel Section for Bridal Car -->
+            <!-- Carousel Section for Heavy Equipment -->
             <div class="carousel">
                 <div class="carousel-images">
                     <!-- Slide 1 -->
                     <div class="carousel-slide">
-                        <img src="bride car 1.webp" alt="Bridal Car 1">
-                    </div>
-                    <!-- Slide 2 -->
-                    <div class="carousel-slide">
-                        <img src="bride car 2.webp" alt="Bridal Car 2">
+                        <img src="123.jpg" alt="Heavy Equipment 1">
                     </div>
                     <!-- Slide 3 -->
                     <div class="carousel-slide">
-                        <img src="bride car 3.webp" alt="Bridal Car 3">
+                        <img src="escavators.jpg" alt="Heavy Equipment 3">
                     </div>
-                    <!-- Slide 4 -->
                     <div class="carousel-slide">
-                        <img src="bride car 4.webp" alt="Bridal Car 4">
-                    </div>
-                    <!-- Slide 5 -->
-                    <div class="carousel-slide">
-                        <img src="bride car 5.webp" alt="Bridal Car 5">
-                    </div>
-                    <!-- Slide 6 -->
-                    <div class="carousel-slide">
-                        <img src="bride car 6.webp" alt="Bridal Car 6">
+                        <img src="bulldozer-safety-training-scaled-1.jpg" alt="Heavy Equipment 3">
                     </div>
                 </div>
 
                 <!-- Left and Right Navigation Arrows -->
-                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                <button class="prev" onclick="moveSlide(-1, this)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1, this)">&#10095;</button>
             </div>
 
             <!-- Description on the right -->
             <div class="description">
-            <p>Please provide the project details for proper quotation:
-                1. Location:
-                
-                2. Scope of work/project:
-                
-                3. Hours:
-                
-                </p>
-                <!-- Book Now Button -->
-                <a href="penguin.html" class="book-now-btn">Book Now</a>
+                <h3>Available Equipment:</h3>
+                <ul>
+                    <li>Excavators</li>
+                    <li>Bulldozers</li>
+                    <li>Cranes</li>
+                    <li>Backhoes</li>
+                </ul>
+                <p>Please provide the following details for proper quotation:</p>
+                <ul>
+                    <li>-Project Location</li>
+                    <li>-Scope of work</li>
+                    <li>-Duration needed</li>
+                </ul>
+                <a href="penguin.html#contact" class="book-now-btn">Book Now</a>
             </div>
         </div>
     </div>
@@ -390,53 +495,43 @@
     <div class="content">
         <div class="service-section">
             <h2>General Construction & Maintenance Services</h2>
-            <p>We offer luxury bridal car services to make your special day even more memorable. Our cars are elegant, well-maintained, and ready to make your wedding day perfect.</p>
+            <p>We deliver high-quality construction and maintenance solutions for residential, commercial, and industrial properties. Our experienced team ensures excellence in every project.</p>
 
-            <!-- Carousel Section for Bridal Car -->
+            <!-- Carousel Section for Construction -->
             <div class="carousel">
                 <div class="carousel-images">
                     <!-- Slide 1 -->
                     <div class="carousel-slide">
-                        <img src="bride car 1.webp" alt="Bridal Car 1">
+                        <img src="c1.jpg" alt="Construction Service 1">
                     </div>
                     <!-- Slide 2 -->
                     <div class="carousel-slide">
-                        <img src="bride car 2.webp" alt="Bridal Car 2">
+                        <img src="company-1.jpg" alt="Construction Service 2">
                     </div>
                     <!-- Slide 3 -->
                     <div class="carousel-slide">
-                        <img src="bride car 3.webp" alt="Bridal Car 3">
-                    </div>
-                    <!-- Slide 4 -->
-                    <div class="carousel-slide">
-                        <img src="bride car 4.webp" alt="Bridal Car 4">
-                    </div>
-                    <!-- Slide 5 -->
-                    <div class="carousel-slide">
-                        <img src="bride car 5.webp" alt="Bridal Car 5">
-                    </div>
-                    <!-- Slide 6 -->
-                    <div class="carousel-slide">
-                        <img src="bride car 6.webp" alt="Bridal Car 6">
+                        <img src="civil-construction.jpg" alt="Construction Service 3">
                     </div>
                 </div>
 
                 <!-- Left and Right Navigation Arrows -->
-                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                <button class="prev" onclick="moveSlide(-1, this)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1, this)">&#10095;</button>
             </div>
 
             <!-- Description on the right -->
             <div class="description">
-                <h3>Package Includes:</h3>
+                <h3>Our Services:</h3>
                 <ul>
-                    <li>-New Construction Projects</li>
-                    <li>-Renovations & Remodeling</li>
-                    <li>-Plumbing Services</li>
-                    <li>-Energy Efficiency Solutions</li>
-                    <li>-Building Systems & Equipment Maintenance</li>
-                <!-- Book Now Button -->
-                <a href="penguin.html" class="book-now-btn">Book Now</a>
+                    <li>New Construction Projects</li>
+                    <li>Renovations & Remodeling</li>
+                    <li>Plumbing Services</li>
+                    <li>Energy Efficiency Solutions</li>
+                    <li>Building Systems & Equipment Maintenance</li>
+                    <li>Project Management</li>
+                </ul>
+                <p><strong>Free consultation and estimates available.</strong></p>
+                <a href="penguin.html#contact" class="book-now-btn">Book Now</a>
             </div>
         </div>
     </div>
@@ -444,78 +539,92 @@
     <div class="content">
         <div class="service-section">
             <h2>Furniture Hotel & Residential</h2>
-            <p>We offer luxury bridal car services to make your special day even more memorable. Our cars are elegant, well-maintained, and ready to make your wedding day perfect.</p>
+            <p>Transform your space with our custom-made furniture solutions. We specialize in creating beautiful, functional pieces for both residential homes and hotel properties.</p>
 
-            <!-- Carousel Section for Bridal Car -->
+            <!-- Carousel Section for Furniture -->
             <div class="carousel">
                 <div class="carousel-images">
                     <!-- Slide 1 -->
                     <div class="carousel-slide">
-                        <img src="bride car 1.webp" alt="Bridal Car 1">
+                        <img src="f.webp" alt="Furniture Service 1">
                     </div>
                     <!-- Slide 2 -->
                     <div class="carousel-slide">
-                        <img src="bride car 2.webp" alt="Bridal Car 2">
+                        <img src="f.jpg" alt="Furniture Service 2">
                     </div>
                     <!-- Slide 3 -->
                     <div class="carousel-slide">
-                        <img src="bride car 3.webp" alt="Bridal Car 3">
-                    </div>
-                    <!-- Slide 4 -->
-                    <div class="carousel-slide">
-                        <img src="bride car 4.webp" alt="Bridal Car 4">
-                    </div>
-                    <!-- Slide 5 -->
-                    <div class="carousel-slide">
-                        <img src="bride car 5.webp" alt="Bridal Car 5">
-                    </div>
-                    <!-- Slide 6 -->
-                    <div class="carousel-slide">
-                        <img src="bride car 6.webp" alt="Bridal Car 6">
+                        <img src="Hotel-Furniture-with-Home-Comfort.jpg" alt="Furniture Service 3">
                     </div>
                 </div>
 
                 <!-- Left and Right Navigation Arrows -->
-                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                <button class="prev" onclick="moveSlide(-1, this)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1, this)">&#10095;</button>
             </div>
 
             <!-- Description on the right -->
             <div class="description">
-                <h3>Package Includes:</h3>
+                <h3>Our Specialties:</h3>
                 <ul>
-                    <li>-Custom-made Furniture for Bedrooms, Living Rooms, and Offices</li>
-                    <li>-Hotel Furniture (Lobby, Dining, Guest Rooms)</li>
-                    <li>-Driver in semi-formal attire</li>
-                    <li>-From hotel to ceremony</li>
-                    <li>-From ceremony to reception</li>
-                <!-- Book Now Button -->
-                <a href="penguin.html" class="book-now-btn">Book Now</a>
+                    <li>Custom-made Residential Furniture</li>
+                    <li>Hotel Furniture Solutions</li>
+                    <li>Office Furniture</li>
+                    <li>Interior Design Consultation</li>
+                    <li>Professional Installation</li>
+                    <li>Quality Materials</li>
+                </ul>
+                <p><strong>Contact us for custom designs and quotes.</strong></p>
+                <a href="penguin.html#contact" class="book-now-btn">Book Now</a>
             </div>
         </div>
     </div>
 
     <script>
         // JavaScript for carousel functionality
-        let slideIndex = 1;
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all carousels
+            let carousels = document.querySelectorAll('.carousel');
+            carousels.forEach((carousel, index) => {
+                carousel.setAttribute('data-index', index);
+                showSlides(1, index);
+            });
 
-        function showSlides(n) {
-            let slides = document.querySelectorAll('.carousel-slide');
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+            // Add click handlers to all navigation buttons
+            document.querySelectorAll('.prev, .next').forEach(button => {
+                button.addEventListener('click', function() {
+                    let carouselIndex = parseInt(this.closest('.carousel').getAttribute('data-index'));
+                    moveSlide(this.classList.contains('prev') ? -1 : 1, carouselIndex);
+                });
+            });
+        });
+
+        let slideIndices = {};
+
+        function showSlides(n, carouselIndex) {
+            if (!slideIndices[carouselIndex]) {
+                slideIndices[carouselIndex] = 1;
             }
-            slides[slideIndex - 1].style.display = "block";
+
+            let carousel = document.querySelectorAll('.carousel')[carouselIndex];
+            let slides = carousel.querySelectorAll('.carousel-slide');
+            
+            slideIndices[carouselIndex] += n;
+
+            if (slideIndices[carouselIndex] > slides.length) {
+                slideIndices[carouselIndex] = 1;
+            }
+            if (slideIndices[carouselIndex] < 1) {
+                slideIndices[carouselIndex] = slides.length;
+            }
+
+            slides.forEach(slide => slide.style.display = "none");
+            slides[slideIndices[carouselIndex] - 1].style.display = "block";
         }
 
-        // Navigate through the slides
-        function moveSlide(n) {
-            showSlides(slideIndex += n);
+        function moveSlide(n, carouselIndex) {
+            showSlides(n, carouselIndex);   
         }
-
-        // Initialize carousel for both sections
-        showSlides(slideIndex);
     </script>
 
 </body>
