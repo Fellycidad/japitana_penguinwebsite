@@ -99,24 +99,17 @@
             position: relative;
         }
 
-        img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-.carousel-images {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-.carousel-images img {
-    width: 100%;
-    max-width: 800px; 
-    height: auto;
-    object-fit: cover;
-}
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
 
+        .carousel-images img {
+            width: 100%;
+            max-width: 800px; /* Ensure the image doesn't exceed a maximum width */
+            height: auto;
+            border-radius: 8px;
+        }
 
         .carousel-slide {
             min-width: 100%;
@@ -227,11 +220,6 @@
     font-weight: bold;
     color: #333;
 }
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 
         /* Mobile Responsive Design */
         @media screen and (max-width: 768px) {
@@ -387,15 +375,15 @@ img {
                 <div class="carousel-images">
                     <!-- Slide 1 -->
                     <div class="carousel-slide">
-                        <img src="tow1.jpg" alt="Towing Service 1">
+                        <img src="truck1.jpeg" alt="Towing Service 1">
                     </div>
                     <!-- Slide 2 -->
                     <div class="carousel-slide">
-                        <img src="tow2.jpg" alt="Towing Service 2">
+                        <img src="truck 2.webp" alt="Towing Service 2">
                     </div>
                     <!-- Slide 3 -->
                     <div class="carousel-slide">
-                        <img src="tow3.jpg" alt="Towing Service 3">
+                        <img src="truck 3.webp" alt="Towing Service 3">
                     </div>
                 </div>
 
@@ -428,7 +416,7 @@ img {
                 <div class="carousel-images">
                     <!-- Slide 1 -->
                     <div class="carousel-slide">
-                        <img src="trucking-companies-in-the-philippines-2-67d9-65a1.webp" alt="Trucking Service 1">
+                        <img src="tr 1.png" alt="Trucking Service 1">
                     </div>
                     <!-- Slide 2 -->
                     <div class="carousel-slide">
