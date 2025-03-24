@@ -27,13 +27,8 @@
             contactNav.addEventListener("click", () => showSection(contactSection));
             learnMoreBtn.addEventListener("click", () => showSection(aboutSection));
 
-            // Handle hash in URL
-            if (window.location.hash === "#contact") {
-                showSection(contactSection);
-            } else {
-                // Show only the home section on load if no hash
-                showSection(homeSection);
-            }
+            // Show only the home section on load
+            showSection(homeSection);
         });
     </script>
 </head>
@@ -85,6 +80,7 @@
             construction, and equipment rentals. Our mission is to deliver reliable and efficient services that exceed customer expectations.</p>
         </div>
         <div class="about-container">
+            <h2>About Us</h2>
             <p><strong>Penguin Sales & Services Company</strong> is a trusted provider of transportation, logistics, and equipment rental solutions. With years of experience, we take pride in delivering high-quality services tailored to meet our clients' needs.</p>
             <h3>Our Mission</h3>
             <p>Our mission is to provide <strong>efficient, reliable, and professional</strong> services in every aspect of our business. We strive to exceed customer expectations through <strong>integrity, innovation, and commitment to excellence</strong>.</p>
