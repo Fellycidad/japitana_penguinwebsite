@@ -1,0 +1,347 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #FFD778;
+    border-bottom: 2px solid #ddd;
+    position: relative;
+    z-index: 100;
+}
+
+/* Logo and Company Name */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    width: 60px;
+    height: auto;
+}
+
+.company-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Navbar Styling */
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+    padding: 0;
+}
+
+.navbar li {
+    position: relative;
+    padding: 5px 0;
+}
+
+/* Main Menu Links */
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.navbar a:hover {
+    text-decoration: underline;
+    color: #555;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    min-width: 200px;
+    border-radius: 5px;
+    z-index: 1000; /* Ensure dropdown is above video */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dropdown Links */
+.dropdown-content li {
+    padding: 8px 15px;
+}
+
+.dropdown-content a {
+    color: #000;
+    font-weight: normal;
+    display: block;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+/* Hover Effect for Dropdown */
+.dropdown-content a:hover {
+    background: #f5f5f5;
+    text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+/* Full-screen video background */
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay for readability */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+}
+
+/* Text Styling */
+.hero-overlay h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.hero-overlay p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    background-color: #dda044;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #dda044;
+}
+
+@media (max-width: 768px) {
+    .hero-overlay h1 {
+        font-size: 2em;
+    }
+
+    .hero-overlay p {
+        font-size: 1.2em;
+    }
+
+    .cta-button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+/* Text Under Video */
+.hero-description {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.description-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.description-container h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.description-container p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* About Us Section */
+.about-section {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+}
+
+.about-container h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.about-container h3 {
+    font-size: 24px;
+    color: #555;
+    margin-top: 20px;
+}
+
+.about-container p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.about-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-container ul li {
+    font-size: 18px;
+    color: #444;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.about-container ul li::before {
+    content: "✔";
+    color: #dda044;
+    font-weight: bold;
+    margin-right: 10px;
+}
+/* Contact Section Styles */
+.contact-section {
+    display: none;
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #E3F2FD, #FFD778);
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    color: #dda044;
+    margin-bottom: 15px;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #dda044;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #dda044;
+    outline: none;
+}
+
+.contact-form button {
+    width: 100%;
+    background: #dda044;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #dda044;
+}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info strong {
+    color: #dda044;
+}
