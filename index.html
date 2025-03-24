@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penguin Sales & Services Company</title>
+    <link rel="stylesheet" href="penguin.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const homeSection = document.getElementById("home");
+            const aboutSection = document.getElementById("about");
+            const contactSection = document.getElementById("contact");
+            const homeNav = document.getElementById("homeNav");
+            const aboutNav = document.getElementById("aboutNav");
+            const contactNav = document.getElementById("contactNav");
+            const learnMoreBtn = document.getElementById("learnMore");
+
+            function showSection(section) {
+                homeSection.style.display = "none";
+                aboutSection.style.display = "none";
+                contactSection.style.display = "none";
+                section.style.display = "block";
+            }
+
+            homeNav.addEventListener("click", () => showSection(homeSection));
+            aboutNav.addEventListener("click", () => showSection(aboutSection));
+            contactNav.addEventListener("click", () => showSection(contactSection));
+            learnMoreBtn.addEventListener("click", () => showSection(aboutSection));
+
+            // Show only the home section on load
+            showSection(homeSection);
+        });
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="logo.webp" alt="Company Logo">
+            <span class="company-name">Penguin Sales & Services</span>
+        </div>
+        <nav>
+            <ul class="navbar">
+                <li><a href="penguin.html" id="homeNav">Home</a></li>
+                <li class="dropdown">
+                    <a href=>Our Services</a>
+                    <ul class="dropdown-content">
+                        <li><a href="services.html#bridal-car">Bridal Car Services</a></li>
+                        <li><a href="services.html#towing-services">Towing Services</a></li>
+                        <li><a href="services.html #trucking-services">Trucking Services</a></li>
+                        <li><a href="services.html #heavy-equipment">Heavy Equipment Rental</a></li>
+                        <li><a href="services.html #construction">General Construction</a></li>
+                        <li><a href="services.html #furniture-services">Furniture & Hotel</a></li>
+                        <li><a href="services.html #auto-parts">Auto Parts</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" id="aboutNav">About Us</a></li>
+                <li><a href="#" id="contactNav">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section (Video Background) -->
+    <section id="home" class="hero-section">
+        <video autoplay muted loop class="hero-video">
+            <source src="https://v1.pinimg.com/videos/mc/720p/a1/ab/48/a1ab48ca93e81daedfad844af9eb3683.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay">
+            <h1>Welcome to Penguin Sales & Services</h1>
+            <p>Your trusted partner in quality services.</p>
+            <a href="#" id="learnMore" class="cta-button">Learn More About Us</a>
+        </div>
+    </section>
+
+    <!-- About Us Section (Initially Hidden) -->
+    <section id="about" class="about-section">
+        <div class="description-container">
+            <h2>About Penguin Sales & Services</h2>
+            <p>Penguin Sales & Services Company is dedicated to providing high-quality solutions in transportation, logistics, 
+            construction, and equipment rentals. Our mission is to deliver reliable and efficient services that exceed customer expectations.</p>
+        </div>
+        <div class="about-container">
+            <h2>About Us</h2>
+            <p><strong>Penguin Sales & Services Company</strong> is a trusted provider of transportation, logistics, and equipment rental solutions. With years of experience, we take pride in delivering high-quality services tailored to meet our clients' needs.</p>
+            <h3>Our Mission</h3>
+            <p>Our mission is to provide <strong>efficient, reliable, and professional</strong> services in every aspect of our business. We strive to exceed customer expectations through <strong>integrity, innovation, and commitment to excellence</strong>.</p>
+            <h3>Why Choose Us?</h3>
+            <ul>
+                <li>Reliable and Trusted – We have built a reputation for excellence.</li>
+                <li>Wide Range of Services – From trucking to heavy equipment rentals.</li>
+                <li>Experienced Team – Professionals committed to quality service.</li>
+                <li>Customer Satisfaction – We prioritize client needs and deliver solutions.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Us Section (Initially Hidden) -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Feel free to reach out to us with any inquiries or concerns.</p>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <p><strong>Email:</strong> info.qpssco@gmail.com</p>
+            <p><strong>Phone:</strong>  (0925) 551 0987</p>
+            <p><strong>Address:</strong> 123 Penguin Street, Iceberg City</p>
+        </div>
+    </section>
+</body>
+</html>
